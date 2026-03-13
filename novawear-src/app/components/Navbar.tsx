@@ -6,12 +6,10 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Inicio', href: '#' },
-    { name: 'Hombre', href: '#' },
-    { name: 'Mujer', href: '#' },
-    { name: 'Colección Vintage', href: '#' },
-    { name: 'Ofertas', href: '#' },
-    { name: 'Contacto', href: '#' },
+    { name: 'Inicio', href: '/' },
+    { name: 'Productos', href: '/products' },
+    { name: 'Carrito', href: '/cart' },
+    { name: 'Admin', href: '/admin/products' },
   ];
 
   return (
