@@ -3,7 +3,7 @@
 @section('content')
 
 {{-- Header --}}
-<div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-8 -mt-8 mb-8">
+<div class="bg-gradient-to-r from-amber-600 to-yellow-600 text-white py-8 -mt-8 mb-8">
     <div class="max-w-3xl mx-auto px-4">
         <div class="flex items-center gap-3 mb-2">
             <a href="{{ route('admin.products.index') }}" class="text-purple-200 hover:text-white transition">

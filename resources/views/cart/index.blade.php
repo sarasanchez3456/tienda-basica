@@ -3,7 +3,7 @@
 @section('content')
 
 {{-- Hero del carrito --}}
-<div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-12 -mt-8 mb-8">
+<div class="bg-gradient-to-r from-amber-600 to-yellow-600 text-white py-12 -mt-8 mb-8">
     <div class="max-w-7xl mx-auto px-4 text-center">
         <h1 class="text-4xl font-bold mb-2">Carrito de Compras</h1>
         <p class="text-purple-100">Revisa tus productos antes de finalizar la compra</p>
@@ -50,7 +50,7 @@
                 {{-- Detalles --}}
                 <div class="flex-1">
                     <h3 class="font-bold text-lg text-gray-800 mb-1">{{ $item['name'] }}</h3>
-                    <p class="text-purple-600 font-semibold">${{ number_format($item['price'], 2) }} c/u</p>
+                    <p class="text-amber-600 font-semibold">${{ number_format($item['price'], 2) }} c/u</p>
                 </div>
                 
                 {{-- Cantidad --}}
@@ -59,13 +59,13 @@
                         @csrf
                         @method('PUT')
                         <div class="flex items-center border border-gray-200 rounded-lg">
-                            <button type="button" onclick="this.parentNode.querySelector('input').stepDown(); this.form.submit()" class="px-3 py-2 text-gray-500 hover:text-purple-600 hover:bg-purple-50 transition">
+                            <button type="button" onclick="this.parentNode.querySelector('input').stepDown(); this.form.submit()" class="px-3 py-2 text-gray-500 hover:text-amber-600 hover:bg-amber-50 transition">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
                                 </svg>
                             </button>
                             <input type="number" name="quantity" value="{{ $item['quantity'] }}" min="1" class="w-12 text-center border-none focus:ring-0 py-2">
-                            <button type="button" onclick="this.parentNode.querySelector('input').stepUp(); this.form.submit()" class="px-3 py-2 text-gray-500 hover:text-purple-600 hover:bg-purple-50 transition">
+                            <button type="button" onclick="this.parentNode.querySelector('input').stepUp(); this.form.submit()" class="px-3 py-2 text-gray-500 hover:text-amber-600 hover:bg-amber-50 transition">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                                 </svg>
@@ -110,7 +110,7 @@
                     <hr class="border-gray-200">
                     <div class="flex justify-between text-xl font-bold">
                         <span>Total</span>
-                        <span class="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent text-2xl">
+                        <span class="bg-gradient-to-r from-amber-600 to-yellow-600 bg-clip-text text-transparent text-2xl">
                             ${{ number_format($total, 2) }}
                         </span>
                     </div>

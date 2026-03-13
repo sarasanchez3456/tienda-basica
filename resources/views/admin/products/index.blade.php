@@ -55,7 +55,7 @@
                             <span class="font-semibold text-gray-800">{{ $product->name }}</span>
                         </td>
                         <td class="p-4">
-                            <span class="font-bold text-purple-600">${{ number_format($product->price, 2) }}</span>
+                            <span class="font-bold text-amber-600">${{ number_format($product->price, 2) }}</span>
                         </td>
                         <td class="p-4">
                             @if($product->stock > 10)
@@ -113,7 +113,7 @@
                                 </svg>
                             </div>
                             <p class="text-gray-500 text-lg">No hay productos registrados</p>
-                            <a href="{{ route('admin.products.create') }}" class="text-purple-600 font-medium hover:underline mt-2 inline-block">
+                            <a href="{{ route('admin.products.create') }}" class="text-amber-600 font-medium hover:underline mt-2 inline-block">
                                 Crea tu primer producto
                             </a>
                         </td>

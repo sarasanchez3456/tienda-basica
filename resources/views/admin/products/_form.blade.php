@@ -6,13 +6,13 @@ $isEdit = isset($product);
     {{-- Nombre --}}
     <div>
         <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Nombre del producto</label>
-        <input type="text" id="name" name="name" value="{{ old('name', $product->name ?? '') }}" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition" placeholder="Ej: Camiseta de algodón">
+        <input type="text" id="name" name="name" value="{{ old('name', $product->name ?? '') }}" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent transition" placeholder="Ej: Camiseta de algodón">
     </div>
     
     {{-- Descripción --}}
     <div>
         <label for="description" class="block text-sm font-semibold text-gray-700 mb-2">Descripción</label>
-        <textarea id="description" name="description" rows="4" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition" placeholder="Describe las características del producto...">{{ old('description', $product->description ?? '') }}</textarea>
+        <textarea id="description" name="description" rows="4" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent transition" placeholder="Describe las características del producto...">{{ old('description', $product->description ?? '') }}</textarea>
     </div>
     
     {{-- Precio y Stock --}}
@@ -21,12 +21,12 @@ $isEdit = isset($product);
             <label for="price" class="block text-sm font-semibold text-gray-700 mb-2">Precio</label>
             <div class="relative">
                 <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">$</span>
-                <input type="number" step="0.01" min="0" id="price" name="price" value="{{ old('price', $product->price ?? '') }}" required class="w-full pl-8 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition" placeholder="0.00">
+                <input type="number" step="0.01" min="0" id="price" name="price" value="{{ old('price', $product->price ?? '') }}" required class="w-full pl-8 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent transition" placeholder="0.00">
             </div>
         </div>
         <div>
             <label for="stock" class="block text-sm font-semibold text-gray-700 mb-2">Stock</label>
-            <input type="number" min="0" id="stock" name="stock" value="{{ old('stock', $product->stock ?? 0) }}" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition" placeholder="0">
+            <input type="number" min="0" id="stock" name="stock" value="{{ old('stock', $product->stock ?? 0) }}" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent transition" placeholder="0">
         </div>
     </div>
     
@@ -53,7 +53,7 @@ $isEdit = isset($product);
     
     {{-- Estado --}}
     <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl">
-        <input type="checkbox" id="active" name="active" value="1" {{ old('active', $product->active ?? true) ? 'checked' : '' }} class="w-5 h-5 text-purple-600 rounded focus:ring-purple-500">
+        <input type="checkbox" id="active" name="active" value="1" {{ old('active', $product->active ?? true) ? 'checked' : '' }} class="w-5 h-5 text-amber-600 rounded focus:ring-amber-500">
         <label for="active" class="text-gray-700 font-medium">Producto activo (visible en la tienda)</label>
     </div>
 </div>

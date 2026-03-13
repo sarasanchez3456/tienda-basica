@@ -1,13 +1,13 @@
 @extends('layouts.app')
-@section('title', 'Productos - ShopHub')
+@section('title', 'Productos - NovaWear')
 @section('content')
 
 {{-- Hero Section --}}
 <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
     {{-- Orbes de colores --}}
-    <div class="orb w-96 h-96 bg-accent-pink top-0 left-0 float-animation"></div>
-    <div class="orb w-80 h-80 bg-accent-purple top-1/4 right-0 float-animation float-delay-1"></div>
-    <div class="orb w-72 h-72 bg-accent-blue bottom-0 left-1/4 float-animation float-delay-2"></div>
+    <div class="orb w-96 h-96 bg-amber-500 top-0 left-0 float-animation"></div>
+    <div class="orb w-80 h-80 bg-amber-600 top-1/4 right-0 float-animation float-delay-1"></div>
+    <div class="orb w-72 h-72 bg-yellow-600 bottom-0 left-1/4 float-animation float-delay-2"></div>
     
     <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <h1 class="text-6xl md:text-7xl font-bold mb-6 text-gradient">
@@ -65,7 +65,7 @@
                         Agotado
                     </div>
                     @elseif($product->stock < 5)
-                    <div class="absolute top-4 left-4 bg-accent-pink text-white px-4 py-1.5 rounded-full text-sm font-bold animate-pulse">
+                    <div class="absolute top-4 left-4 bg-amber-500 text-white px-4 py-1.5 rounded-full text-sm font-bold animate-pulse">
                         Ultima unidad
                     </div>
                     @else

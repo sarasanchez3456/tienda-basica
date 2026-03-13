@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Tienda Online')</title>
+    <title>@yield('title', 'NovaWear - Tienda Online')</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
@@ -12,16 +12,14 @@
             theme: {
                 extend: {
                     colors: {
-                        'dark': '#0f0f23',
-                        'dark-card': '#1a1a2e',
-                        'accent-pink': '#ff6b9d',
-                        'accent-purple': '#c084fc',
-                        'accent-blue': '#60a5fa',
-                        'accent-cyan': '#22d3ee',
-                        'accent-yellow': '#fbbf24',
+                        'dark': '#0a0a0a',
+                        'dark-card': '#1a1a1a',
+                        'accent-gold': '#d4c5b0',
+                        'accent-brown': '#b8860b',
+                        'accent-cream': '#f5f0e6',
                     },
                     fontFamily: {
-                        ' jakarta': ['Plus Jakarta Sans', 'sans-serif'],
+                        'jakarta': ['Plus Jakarta Sans', 'sans-serif'],
                     },
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
@@ -36,12 +34,12 @@
         * { font-family: 'Plus Jakarta Sans', sans-serif; }
         
         body {
-            background-color: #0f0f23;
-            color: #e2e8f0;
+            background-color: #0a0a0a;
+            color: #f5f0e6;
         }
         
         .gradient-bg {
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background: linear-gradient(-45deg, #b8860b, #d4c5b0, #8b6914, #c9b896);
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;
         }
@@ -56,11 +54,11 @@
         }
         
         .glow {
-            box-shadow: 0 0 40px rgba(139, 92, 246, 0.3);
+            box-shadow: 0 0 40px rgba(184, 134, 11, 0.3);
         }
         
         .glow:hover {
-            box-shadow: 0 0 60px rgba(139, 92, 246, 0.5);
+            box-shadow: 0 0 60px rgba(184, 134, 11, 0.5);
         }
         
         .glass {
@@ -70,20 +68,20 @@
         }
         
         .text-gradient {
-            background: linear-gradient(135deg, #ff6b9d, #c084fc, #60a5fa, #22d3ee);
+            background: linear-gradient(135deg, #d4c5b0, #b8860b, #f5f0e6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         
         .btn-gradient {
-            background: linear-gradient(135deg, #ff6b9d, #c084fc);
+            background: linear-gradient(135deg, #b8860b, #d4c5b0);
             transition: all 0.3s ease;
         }
         
         .btn-gradient:hover {
             transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(192, 132, 252, 0.4);
+            box-shadow: 0 20px 40px rgba(184, 134, 11, 0.4);
         }
         
         .float-animation {
@@ -147,18 +145,18 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
                             </svg>
                         </div>
-                        <span class="text-xl font-bold text-gradient">ShopHub</span>
+                        <span class="text-xl font-bold text-gradient">NovaWear</span>
                     </a>
                 </div>
                 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="{{ route('products.index') }}" class="text-gray-300 hover:text-white transition font-medium relative group">
+                    <a href="{{ route('products.index') }}" class="text-gray-300 hover:text-amber-400 transition font-medium relative group">
                         Productos
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-accent-pink to-accent-purple group-hover:w-full transition-all duration-300"></span>
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-400 to-amber-600 group-hover:w-full transition-all duration-300"></span>
                     </a>
-                    <a href="{{ route('admin.products.index') }}" class="text-gray-300 hover:text-white transition font-medium relative group">
+                    <a href="{{ route('admin.products.index') }}" class="text-gray-300 hover:text-amber-400 transition font-medium relative group">
                         Admin
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-accent-purple to-accent-blue group-hover:w-full transition-all duration-300"></span>
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-600 to-yellow-500 group-hover:w-full transition-all duration-300"></span>
                     </a>
                 </div>
                 
@@ -168,7 +166,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
                     </svg>
                     @if(session()->has('cart') && count(session('cart')) > 0)
-                    <span class="absolute -top-2 -right-2 bg-white text-accent-pink text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                    <span class="absolute -top-2 -right-2 bg-amber-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                         {{ count(session('cart')) }}
                     </span>
                     @endif
@@ -203,9 +201,9 @@
     {{-- Footer --}}
     <footer class="bg-dark-card border-t border-white/10 py-12 mt-auto">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <h3 class="text-2xl font-bold text-gradient mb-4">ShopHub</h3>
-            <p class="text-gray-400 mb-6">Tu tienda online favorita</p>
-            <p class="text-gray-500">© 2026 ShopHub. Todos los derechos reservados.</p>
+            <h3 class="text-2xl font-bold text-gradient mb-4">NovaWear</h3>
+            <p class="text-gray-400 mb-6">Tu tienda de ropa favorita</p>
+            <p class="text-gray-500">© 2026 NovaWear. Todos los derechos reservados.</p>
         </div>
     </footer>
 </body>
